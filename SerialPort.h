@@ -39,81 +39,36 @@ class SerialPort{
         }
 
         void call(string port){
-            if(port == "A"){
-                call_output(false, false, false, false);
-            }
-            else if(port == "B"){
-                call_output(false, false, false, true);
-            }
-            else if(port == "C"){
-                call_output(false, false, true, false);
-            }
-            else if(port == "D"){
-                call_output(false, false, true, true);
-            }
-            else if(port == "E"){
-                call_output(false, true, false, false);
-            }
-            else if(port == "F"){
-                call_output(false, true, false, true);
-            }
-            else if(port == "G"){
-                call_output(false, true, true, false);
-            }
-            else if(port == "H"){
-                call_output(false, true, true, true);
-            }
-            else if(port == "I"){
-                call_output(true, false, false, false);
-            }
-            else if(port == "J"){
-                call_output(true, false, false, true);
-            }
-            else if(port == "K"){
-                call_output(true, false, true, false);
-            }
-            else if(port == "L"){
-                call_output(true, false, true, true);
-            }
-            else if(port == "M"){
-                call_output(true, true, false, false);
-            }
-            else if(port == "N"){
-                call_output(true, true, false, true);
-            }
-            else if(port == "O"){
-                call_output(true, true, true, false);
-            }
-            else if(port == "P"){
-                call_output(true, true, true, true);
-            }
+            if(port == "A"){call_output(false, false, false, false);}
+            else if(port == "B"){call_output(false, false, false, true);}
+            else if(port == "C"){call_output(false, false, true, false);}
+            else if(port == "D"){call_output(false, false, true, true);}
+            else if(port == "E"){call_output(false, true, false, false);}
+            else if(port == "F"){call_output(false, true, false, true);}
+            else if(port == "G"){call_output(false, true, true, false);}
+            else if(port == "H"){call_output(false, true, true, true);}
+            else if(port == "I"){call_output(true, false, false, false);}
+            else if(port == "J"){call_output(true, false, false, true);}
+            else if(port == "K"){call_output(true, false, true, false);}
+            else if(port == "L"){call_output(true, false, true, true);}
+            else if(port == "M"){call_output(true, true, false, false);}
+            else if(port == "N"){call_output(true, true, false, true);}
+            else if(port == "O"){call_output(true, true, true, false);}
+            else if(port == "P"){call_output(true, true, true, true);}
         }
     
     private:
         void call_output(bool count01, bool count02, bool count03, bool count04){
-            if(count01){
-                digitalWrite(_data01, HIGH);
-            }
-            else{
-                digitalWrite(_data01, LOW);
-            }
-            if(count02){
-                digitalWrite(_data02, HIGH);
-            }
-            else{
-                digitalWrite(_data02, LOW);
-            }
-            if(count03){
-                digitalWrite(_data03, HIGH);
-            }
-            else{
-                digitalWrite(_data03, LOW);
-            }
-            if(count04){
-                digitalWrite(_data04, HIGH);
-            }
-            else{
-                digitalWrite(_data04, LOW);
-            }
+            if(count01){digitalWrite(_data01, HIGH);}
+            else{digitalWrite(_data01, LOW);}
+          
+            if(count02){digitalWrite(_data02, HIGH);}
+            else{digitalWrite(_data02, LOW);}
+          
+            if(count03){digitalWrite(_data03, HIGH);}
+            else{digitalWrite(_data03, LOW);}
+          
+            if(count04){digitalWrite(_data04, HIGH);}
+            else{digitalWrite(_data04, LOW);}
         }
 }
