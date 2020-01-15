@@ -25,7 +25,7 @@ class SerialPort{
             PATH_C= path_c;     // port from data C output
             PATH_D= path_d;     // port from data D output
             CLK_PATH= clk_path; // port from clock output 
-            CLK_TIME= 2;
+            CLK_TIME= 127;      // intensify of the pulse width
 
             pinMode(PATH_A, OUTPUT);
             pinMode(PATH_B, OUTPUT);
@@ -59,8 +59,6 @@ class SerialPort{
             if(c_path_level){ digitalWrite(PATH_C, HIGH); } else{ digitalWrite(PATH_C, LOW); }
             if(d_path_level){ digitalWrite(PATH_D, HIGH); } else{ digitalWrite(PATH_D, LOW); }
 
-            digitalWrite(CLK_PATH, HIGH);
-            delay(CLK_TIME);
-            digitalWrite(CLK_PATH, LOW);
+            analogWrite(CLK_PATH, CLK_TIME);
         }
 }
